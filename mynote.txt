@@ -11,6 +11,3 @@ git remote -v
 git remote add origin xxx@github.com/why250/mkdocs_why.git
 
 git push origin main
-
-%token 
-xxx
