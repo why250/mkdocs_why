@@ -1,0 +1,16 @@
+%git
+git init
+git add .
+git status
+git commit -m 'Initial commit'
+git branch
+git checkout -b main
+
+git remote remove origin
+git remote -v
+git remote add origin https://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@github.com/why250/mkdocs_why.git
+
+git push origin main
+
+%token 
+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
