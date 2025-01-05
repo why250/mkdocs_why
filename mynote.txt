@@ -8,9 +8,9 @@ git checkout -b main
 
 git remote remove origin
 git remote -v
-git remote add origin https://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@github.com/why250/mkdocs_why.git
+git remote add origin xxx@github.com/why250/mkdocs_why.git
 
 git push origin main
 
 %token 
-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
+xxx
