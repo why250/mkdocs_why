@@ -1,0 +1,14 @@
+authors:
+  why:
+    name: Why
+    description: Developer
+    avatar: assets/logo.gif
+    url: https://github.com/why250
+  team:
+    name: Team
+    description: Creator
+    avatar: https://simpleicons.org/icons/materialformkdocs.svg
+  squidfunk:
+    name: Martin Donath
+    description: Creator
+    avatar: https://github.com/squidfunk.png

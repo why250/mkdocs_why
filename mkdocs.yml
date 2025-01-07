@@ -3,6 +3,19 @@ site_url: https://sitename.example
 #nav:
 #  - Home: index.md
 #  - About: about.md
+plugins:
+  - search
+  - blog:
+      archive_date_format: MM/yyyy
+      archive_url_date_format: MM/yyyy
+      categories_allowed:
+        - Car
+        - Analog Circuit
+        - Lifestyle
+        - CS
+  - tags:
+      tags_file: tags.md
+
 theme:
   name: material
   font:
