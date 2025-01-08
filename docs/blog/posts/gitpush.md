@@ -21,6 +21,20 @@ git checkout master
 git commit -m "commit message"
 git push origin master
 ```
+# Git add remote repository
+An exmaple of adding remote repository:
+```py title="add repository"
+git remove origin # remove remote repository
+git remote -v # check remote repository
+git remote add origin https://github.com/why/why.git # add remote repository
+```
+# Git add remote repository
+An exmaple of adding remote repository:
+```py title="add repository"
+git remove origin # remove remote repository
+git remote -v # check remote repository
+git remote add origin https://github.com/why/why.git # add remote repository
+```
 <!-- more -->
 
 # Git cheet sheet
