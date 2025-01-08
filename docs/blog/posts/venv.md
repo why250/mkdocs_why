@@ -14,6 +14,7 @@ authors:
 sudo apt update
 sudo apt install python3-venv
 ```
+<!-- more -->
 
 # Create virtual environment for python project
 An exmaple of creating virtual environment:

@@ -21,6 +21,7 @@ git checkout master
 git commit -m "commit message"
 git push origin master
 ```
+<!-- more -->
 
 # Git cheet sheet
 [Git cheet sheet](https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/)
