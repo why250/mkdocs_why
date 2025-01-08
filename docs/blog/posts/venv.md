@@ -9,6 +9,11 @@ authors:
   - why
 
 ---
+# Download venv
+```py title="download venv"
+sudo apt update
+sudo apt install python3-venv
+```
 
 # Create virtual environment for python project
 An exmaple of creating virtual environment:
@@ -17,3 +22,4 @@ An exmaple of creating virtual environment:
 python3 -m venv my_env
 source my_env/bin/activate
 ```
+
