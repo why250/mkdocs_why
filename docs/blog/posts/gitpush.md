@@ -13,6 +13,8 @@ authors:
 # Git push
 An exmaple of a git push:
 
+<!-- more -->
+
 ```py title="git push"
 git add.
 git status
@@ -35,7 +37,6 @@ git remove origin # remove remote repository
 git remote -v # check remote repository
 git remote add origin https://github.com/why/why.git # add remote repository
 ```
-<!-- more -->
 
 # Git cheet sheet
 [Git cheet sheet](https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/)
