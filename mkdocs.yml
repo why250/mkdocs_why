@@ -13,6 +13,7 @@ plugins:
         - Analog Circuit
         - Lifestyle
         - CS
+        - RF
   - tags:
       tags_file: tags.md
 
