@@ -37,6 +37,8 @@ IIP3 可以通过测量基波输出功率（$P_{\text{fund\_out}}$）和三阶�
 
 $IIP3 = P_{\text{in}} + \frac{1}{2} (P_{\text{fund\_out}} - P_{\text{IM3\_out}})$
 
+$OIP3 = P_{\text{fund\_out}} + \frac{1}{2} (P_{\text{fund\_out}} - P_{\text{IM3\_out}})$
+
 这里：
 - $P_{\text{in}}$ 是输入的激励信号功率。
 - $P_{\text{fund\_out}}$ 是基波输出功率。
