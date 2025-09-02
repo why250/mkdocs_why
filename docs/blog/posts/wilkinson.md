@@ -82,7 +82,7 @@ Wilkinson功分器的核心优势在于它能同时实现端口匹配、功率�
 
 
 
-![alt text](D:\Users\Documents\GitHub\mkdocs_why\docs\assets\image_wilkinson.png)
+![alt text](image/image_wilkinson.png)
 
 [Novel Design of Wilkinson Power Dividers With
 Arbitrary Power Division Ratios](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5546961)
