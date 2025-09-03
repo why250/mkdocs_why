@@ -9,8 +9,6 @@ tags:
 authors:
   - why
 
-**三阶交调（IM3）** 和 **三阶输入截取点（IIP3）** 都是衡量非线性失真的重要参数，但它们的定义和意义有所不同。  
-
 ---
 
 ### **1. 三阶交调（Third-Order Intermodulation, IM3）**
