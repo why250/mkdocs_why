@@ -13,7 +13,7 @@ authors:
 这句话 "The use of admittance inverters is one possible way to transform the lumped-element model into a fully distributed model" 的意思是：
 
 **使用导纳变换器是将集总参数原型滤波器（由理想电感L和电容C组成）转换为完全由分布式参数元件（如传输线段）实现的滤波器的一种设计方法。**
-
+<!-- more -->
 让我们来分解理解：
 
 1.  **Lumped-element model (集总参数模型):**

@@ -43,11 +43,11 @@ theme:
       primary: blue
       accent: deep orange
 markdown_extensions:
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -63,8 +63,13 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
-  
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra:
+  mermaid:
+    version: '8.13.5'
   social:
     - icon: simple/bilibili
       link: https://space.bilibili.com/383477974?spm_id_from=333.337.0.0
