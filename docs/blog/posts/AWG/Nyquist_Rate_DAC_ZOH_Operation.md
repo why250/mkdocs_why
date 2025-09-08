@@ -11,5 +11,5 @@ authors:
 
 ---
 
-![alt text](image/image_dac_1.png)
+![alt text](../image/image_dac_1.png)
 
