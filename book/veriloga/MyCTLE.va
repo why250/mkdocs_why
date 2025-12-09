@@ -1,0 +1,52 @@
+// Include standard definitions for Verilog-A
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Define the module for the 2-pole, 1-zero CTLE
+module ctle_2p1z(in, out, gnd);
+    // Define ports
+    input in, gnd;
+    output out;
+    
+    // Define port disciplines
+    electrical in, out, gnd;
+
+    // --- Parameters ---
+    // These parameters can be set during simulation, with defaults from the image.
+    parameter real Adc = 1.0;                  // DC Gain
+    parameter real fz  = 10.5e9 from (0:inf);    // Zero frequency in Hz
+    parameter real fp1 = 18.6e9 from (0:inf);    // Pole 1 frequency in Hz
+    parameter real fp2 = 14.1e9 from (0:inf);    // Pole 2 frequency in Hz
+
+    // --- Internal Variables ---
+    // These will hold the calculated angular frequencies and the overall gain
+    real w_z, w_p1, w_p2;
+    real gain_k;
+
+    analog begin
+            
+        // Convert frequencies from Hz to angular frequencies (rad/s)
+        w_z = 2 * `M_PI * fz;
+        w_p1 = 2 * `M_PI * fp1;
+        w_p2 = 2 * `M_PI * fp2;
+
+        // Calculate the gain factor 'K' required by the laplace_zp function.
+        // This corresponds to the term (A_dc * ω_p1 * ω_p2 / ω_z) in H(s).
+        gain_k = Adc * w_p1 * w_p2 / w_z;
+
+        // --- Transfer Function Implementation ---
+        // Use the laplace_zp function to model the transfer function H(s).
+        // V(out) = H(s) * V(in)
+        //
+        // The function needs the roots of the numerator (zeros) and denominator (poles).
+        // For a term (s + w), the root is -w.
+        V(out, gnd) <+ laplace_zp(
+            V(in, gnd),    // Input signal
+            { -w_z },      // Zeros array: root of (s + w_z) is -w_z
+            { -w_p1, -w_p2 }, // Poles array: roots of (s + w_p1)*(s + w_p2) are -w_p1 and -w_p2
+            gain_k         // The calculated gain factor K
+        );
+
+    end
+
+endmodule
