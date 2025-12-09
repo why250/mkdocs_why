@@ -45,6 +45,8 @@ $OIP3 = P_{\text{fund\_out}} + \frac{1}{2} (P_{\text{fund\_out}} - P_{\text{IM3\
 
 通常 IIP3 以 dBm 为单位，表示在输入端进行的测量。
 
+![alt text](image/image_0926.png)
+
 ---
 
 ### **3. 三阶交调（IM3）与 IIP3 的区别**
@@ -88,3 +90,9 @@ $= -30 + \frac{1}{2} \times 30 = -30 + 15 = -15 \text{ dBm}$
 ✅ **三阶交调（IM3）：** 直接测量的三阶互调产物，相对基波功率表示。  
 ✅ **三阶输入截取点（IIP3）：** 系统线性度的指标，数值越高，线性性能越好。  
 ✅ **IM3 越低、IIP3 越高，系统的非线性失真越小，性能越优。**
+
+---
+
+### **7. IIP3与P1dB**
+![alt text](image/image_0926_1.png)
+![alt text](image/image_0926_2.png)

@@ -14,6 +14,7 @@ plugins:
         - Lifestyle
         - CS
         - RF
+        - FPGA
   - tags:
       tags_file: tags.md
 
