@@ -1,0 +1,1956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sitename.example/blog/category/fpga/">
+      
+      
+        <link rel="prev" href="../car/">
+      
+      
+        <link rel="next" href="../lifestyle/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/logo.gif">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>FPGA - Why Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fpga" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Why Docs" class="md-header__button md-logo" aria-label="Why Docs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.gif" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Why Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FPGA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Why Docs" class="md-nav__button md-logo" aria-label="Why Docs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.gif" alt="logo">
+
+    </a>
+    Why Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to WhyDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My veriloga
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My veriloga
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Book
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Book
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Veriloga
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Veriloga
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../My_veriloga/book/veriloga/ADC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/01/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01/2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/11/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/10/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/09/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/08/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/07/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/05/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/02/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../archive/01/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01/2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../analog-circuit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analog Circuit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../cs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../car/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Car
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FPGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifestyle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lifestyle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../rf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mkdocs notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mkdocs notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs_notes/admonitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admonitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs_notes/code-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs_notes/content-tabs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content tabs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs_notes/diagram-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagram Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="fpga">FPGA</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../../assets/logo.gif" alt="Why">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-06 00:00:00+00:00">November 6, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">FPGA</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="mcu"><a class="toclink" href="../../2025/11/06/mcu/">Mcu</a></h2>
+<p>好的，我们来一起分析一下您提供的这几张原理图。</p>
+<h4 id="_1"><a class="toclink" href="../../2025/11/06/mcu/#_1"><strong>第一部分：控制逻辑确认</strong></a></h4>
+<blockquote>
+<p>我从PC端生成并发送高级别的文本命令到串口；单片机通过串口接收这些文本命令，通过SPI总线控制DAC芯片的输出电压。控制逻辑是这样的吗？</p>
+</blockquote>
+<p><strong>是的，您的理解完全正确。</strong></p>
+<p>从您提供的原理图中可以清晰地看出这个控制流程：</p>
+<ol>
+<li>
+<p><strong>PC端 -&gt; 串口 -&gt; 单片机 (MCU):</strong></p>
+<ul>
+<li>在第一张图（MCU部分）的右下角，有一个<strong>USB/UART</strong>模块，使用了<code>CH340E</code>芯片 (U1)。</li>
+<li>这是一个典型的USB转串口芯片。PC通过USB线连接到J17接口，<code>CH340E</code>芯片会将USB信号转换为串口信号（RX/TX）。</li>
+<li>这些串口信号 (<code>MCU_RX_D</code>, <code>MCU_TX_D</code>)直接连接到MCU的串口引脚（<code>PA10/USART1_RX</code>, <code>PA9/USART1_TX</code>）。</li>
+<li>因此，PC可以像操作一个普通的COM口一样，向MCU发送文本命令。</li>
+</ul>
+</li>
+<li>
+<p><strong>单片机 (MCU) -&gt; SPI总线 -&gt; DAC:</strong></p>
+<ul>
+<li>在第一张图的中右侧，有明确标注的<strong>SPI通讯接口</strong>。MCU的<code>SPI0</code>接口引脚（<code>MCU_SPI0_SCLK</code>, <code>MCU_SPI0_MISO</code>, <code>MCU_SPI0_MOSI</code>）被引出。</li>
+<li>第三张图清晰地展示了MCU的<code>SPI0</code>接口与DAC信号的连接关系：<ul>
+<li><code>MCU_SPI0_SCLK</code> 连接到 <code>DAC_SCLK</code> (时钟)</li>
+<li><code>MCU_SPI0_MOSI</code> (主出从入) 连接到 <code>DAC_SDI</code> (数据输入)</li>
+<li><code>MCU_SPI0_MISO</code> (主入从出) 连接到 <code>DAC_SDO</code> (数据输出)</li>
+</ul>
+</li>
+<li>第二张图是DAC芯片<code>DAC81416RHA</code> (U12) 的原理图，它的11、13、14号引脚正是SPI接口的<code>SDO</code>, <code>SDI</code>, <code>SCLK</code>。</li>
+<li>此外，MCU还会使用一个GPIO引脚作为片选信号（<code>CS#</code>）来选择控制这个DAC芯片，图中对应的网络是<code>DAC_BALUN_CS#</code>。</li>
+</ul>
+</li>
+</ol>
+<p><strong>总结：</strong> 整个控制链路是：<strong>PC</strong>通过USB发送指令 -&gt; <strong>CH340E</strong>转换为串口信号 -&gt; <strong>MCU</strong>接收并解析指令 -&gt; <strong>MCU</strong>通过<strong>SPI</strong>总线发送数字信号 -&gt; <strong>DAC</strong>将数字信号转换为模拟电压输出。</p>
+<hr />
+<h4 id="dac"><a class="toclink" href="../../2025/11/06/mcu/#dac"><strong>第二部分：DAC的控制逻辑介绍</strong></a></h4>
+<p>这款DAC芯片 (U12, DAC81416RHA) 是一款16通道的数模转换器，MCU通过SPI接口对其进行精确控制。其控制逻辑主要依赖以下几个关键信号：</p>
+<ol>
+<li>
+<p><strong>SPI总线信号 (核心数据传输):</strong></p>
+<ul>
+<li><strong>CS# (Chip Select / 片选):</strong> 这是通信的“开关”。当MCU要与此DAC通信时，会先将<code>DAC_BALUN_CS#</code>这个引脚拉低。通信结束后再拉高。当该引脚为高电平时，DAC会忽略SCLK和SDI上的信号。</li>
+<li><strong>SCLK (Serial Clock / 串行时钟):</strong> 由MCU产生，用于同步数据传输。在SCLK的每个时钟边沿，一位数据被传输。</li>
+<li><strong>SDI (Serial Data In / 数据输入):</strong> MCU通过此引脚将指令和数据（要设置的电压对应的数字值）发送给DAC。</li>
+<li><strong>SDO (Serial Data Out / 数据输出):</strong> DAC通过此引脚可以将内部寄存器的状态或数据回传给MCU，用于读取配置或诊断。</li>
+</ul>
+</li>
+<li>
+<p><strong>关键控制信号:</strong></p>
+<ul>
+<li><strong>LDAC# (Load DAC / 加载DAC):</strong> 这是一个非常重要的同步更新引脚。MCU可以通过SPI向DAC内部的多个通道（例如通道0、通道1、通道5）预先写入新的数据值，但此时DAC的实际模拟输出并不会改变。当所有需要更新的数据都写入后，MCU只需将<code>LDAC#</code>引脚拉低一下，所有预写入的通道就会<strong>在同一时刻</strong>更新其模拟电压输出。这对于需要多通道同步变化的场合至关重要，可以避免各个通道输出电压“此起彼伏”地变化。</li>
+<li><strong>RESET# (Reset / 复位):</strong> 这是一个硬件复位引脚。当MCU将<code>DAC_BALUN_RESET#</code>引脚拉低时，DAC芯片会恢复到其默认的出厂状态（例如，所有通道输出清零或处于中间值）。</li>
+</ul>
+</li>
+</ol>
+<p><strong>典型的控制流程如下：</strong></p>
+<ol>
+<li><strong>初始化:</strong> MCU通过拉低<code>DAC_BALUN_RESET#</code>来硬件复位DAC，确保其处于一个已知的初始状态。</li>
+<li><strong>选择芯片:</strong> MCU将<code>DAC_BALUN_CS#</code>引脚拉低，选中该DAC芯片准备通信。</li>
+<li><strong>发送数据帧:</strong> MCU通过SPI接口（SDI引脚）发送一个完整的数据帧。这个数据帧通常包含：<ul>
+<li><strong>地址位 (Address):</strong> 用来指定要操作16个通道中的哪一个，或者是某个控制寄存器。</li>
+<li><strong>数据位 (Data):</strong> 16位（具体位数需查阅datasheet）的数字量，这个值将决定该通道输出的模拟电压大小。<code>Vout = (Data / 2^N) * Vref</code> (N为DAC位数, Vref为参考电压)。</li>
+</ul>
+</li>
+<li><strong>结束单次传输:</strong> 数据帧发送完毕后，MCU将<code>DAC_BALUN_CS#</code>引脚拉高。</li>
+<li><strong>(可选) 重复步骤2-4:</strong> MCU可以重复向不同的通道写入新的数据值。</li>
+<li><strong>同步更新输出:</strong> 当所有需要更新的通道数据都已写入DAC的内部缓冲寄存器后，MCU产生一个<code>LDAC#</code>的下降沿（拉低再拉高），触发所有通道的模拟输出同时更新到新设定的电压值。</li>
+</ol>
+<p>简单来说，MCU就是通过SPI“告诉”DAC：“请把第X通道的电压设置为Y对应的数值”，并且可以通过<code>LDAC#</code>引脚实现“所有我刚刚设置好的通道，现在一起生效！”的命令。</p>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../../assets/logo.gif" alt="Why">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-06 00:00:00+00:00">November 6, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">FPGA</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="protocol"><a class="toclink" href="../../2025/11/06/protocol/">Protocol</a></h2>
+<p>当然，除了 I2C 和 SPI，嵌入式领域还有许多重要的通信协议，它们各有专长，适用于不同的应用场景。</p>
+<p>这里介绍几种最常见的，并重点解释您提到的 <strong>CAN 总线</strong>。</p>
+<hr />
+<h4 id="1-uart-universal-asynchronous-receivertransmitter"><a class="toclink" href="../../2025/11/06/protocol/#1-uart-universal-asynchronous-receivertransmitter"><strong>1. UART (Universal Asynchronous Receiver/Transmitter)</strong></a></h4>
+<p>可以把它想象成最简单的<strong>“对讲机”</strong>。</p>
+<ul>
+<li><strong>核心思想</strong>: 这是一种<strong>异步</strong>通信，意味着它没有共享的时钟线。通信双方必须事先约定好通信速率（波特率）。它是点对点的，通常用于两个设备之间的全双工通信。</li>
+<li><strong>物理连线</strong>: 只需要两根信号线：<ul>
+<li><strong>TX (Transmit)</strong>: 发送数据线。</li>
+<li><strong>RX (Receive)</strong>: 接收数据线。</li>
+<li>(通常还需要一根GND地线)。</li>
+<li>连接方式是交叉连接：设备A的TX连接到设备B的RX，设备A的RX连接到设备B的TX。</li>
+</ul>
+</li>
+<li><strong>做什么用的</strong>:<ul>
+<li><strong>调试和日志输出</strong>: 这是最常见的用途。工程师通过UART将设备内部的运行状态打印到电脑上查看，就像您之前例子里的<code>CH340E</code> USB转串口芯片一样。</li>
+<li><strong>模块通信</strong>: 连接一些功能模块，如GPS模块、蓝牙模块、GSM模块等。</li>
+<li><strong>简单的设备间通信</strong>: 两个单片机之间进行简单的数据交换。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="2-can-controller-area-network"><a class="toclink" href="../../2025/11/06/protocol/#2-can-controller-area-network"><strong>2. CAN 总线 (Controller Area Network)</strong></a></h4>
+<p>可以把它想象成一个<strong>“极其可靠、有序的公告板”</strong>。</p>
+<ul>
+<li><strong>核心思想</strong>: CAN是一种<strong>总线型</strong>、<strong>多主控</strong>的串行通信协议，专为高可靠性和抗电磁干扰而设计。它不是基于地址的，而是基于<strong>消息ID</strong>的。所有节点都能接收到所有消息，但会通过ID来“过滤”自己感兴趣的消息。</li>
+<li><strong>物理连线</strong>: 使用两根线进行<strong>差分信号</strong>传输：<ul>
+<li><strong>CAN_H (CAN High)</strong></li>
+<li><strong>CAN_L (CAN Low)</strong></li>
+<li><strong>差分信号是其抗干扰能力强的关键</strong>：噪声会同时影响CAN_H和CAN_L，但它们之间的电压<em>差值</em>保持不变，接收端通过检测这个差值来还原信号。</li>
+</ul>
+</li>
+<li>
+<p><strong>关键特性</strong>:</p>
+<ul>
+<li><strong>可靠性极高</strong>: 具有强大的错误检测和错误处理机制（如CRC校验、自动重发、故障节点自动离线等）。</li>
+<li><strong>基于优先级</strong>: 消息ID越小，优先级越高。如果两个节点同时发送，ID值小的节点会“赢得”总线使用权，另一个节点则会停止发送并等待。这保证了重要信息（如刹车指令）总能被优先处理。</li>
+<li><strong>广播通信</strong>: 任何节点发送的消息都会被总线上的所有其他节点接收到。</li>
+</ul>
+</li>
+<li>
+<p><strong>做什么用的 (What is it for?)</strong>:</p>
+<ul>
+<li><strong>汽车电子</strong>: <strong>这是CAN总线的“杀手级”应用</strong>。现代汽车的电子系统就是一个巨大的CAN网络。发动机控制器(ECU)、防抱死刹车系统(ABS)、安全气囊、仪表盘、车门控制模块等都通过CAN总线连接，共享信息并协同工作。</li>
+<li><strong>工业自动化</strong>: 在充满电机的嘈杂工厂环境中，CAN的抗干扰能力使其成为连接机器人、传感器和控制器的理想选择。</li>
+<li><strong>医疗设备</strong>: 如X光机、病人监护系统等，需要高可靠性的内部通信。</li>
+<li><strong>航空航天</strong>: 用于飞机内部的设备间通信。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="3-lin-local-interconnect-network"><a class="toclink" href="../../2025/11/06/protocol/#3-lin-local-interconnect-network"><strong>3. LIN 总线 (Local Interconnect Network)</strong></a></h4>
+<p>可以把它想象成CAN总线的<strong>“廉价小弟”</strong>。</p>
+<ul>
+<li><strong>核心思想</strong>: LIN是一种低成本、低速率的串行通信协议，作为CAN总线的补充而存在。它采用<strong>单主机-多从机</strong>的架构。</li>
+<li><strong>物理连线</strong>: 只需要<strong>一根线</strong>。</li>
+<li><strong>做什么用的</strong>:<ul>
+<li>在汽车中，用于控制那些对成本敏感且不需要高速通信的部件。例如：车窗升降、座椅调节、后视镜控制、雨刮器等。这些简单的功能用CAN太“浪费”了。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="4-one-wire"><a class="toclink" href="../../2025/11/06/protocol/#4-one-wire"><strong>4. One-Wire</strong></a></h4>
+<p>可以把它想象成<strong>“只用一根线就能供电和聊天的门铃”</strong>。</p>
+<ul>
+<li><strong>核心思想</strong>: 顾名思义，它只需要一根数据线（外加一根地线）就能完成通信和为从设备供电（寄生供电模式）。每个从设备都有一个全球唯一的64位ID。</li>
+<li><strong>物理连线</strong>: <strong>一根线 (DQ)</strong>。</li>
+<li><strong>做什么用的</strong>:<ul>
+<li><strong>温度传感器</strong>: 著名的DS18B20温度传感器就是使用One-Wire协议。</li>
+<li><strong>身份认证</strong>: 用于需要唯一ID的场合，如电子钥匙。</li>
+<li><strong>连接大量简单传感器</strong>: 在引脚资源极其宝贵时非常有用。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="_1"><a class="toclink" href="../../2025/11/06/protocol/#_1"><strong>总结对比</strong></a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">协议</th>
+<th style="text-align: left;">主要用途</th>
+<th style="text-align: left;">连线数量</th>
+<th style="text-align: left;">拓扑结构</th>
+<th style="text-align: left;">速度</th>
+<th style="text-align: left;">关键特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>I2C</strong></td>
+<td style="text-align: left;">连接板内大量低速外设 (传感器, EEPROM)</td>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">总线型</td>
+<td style="text-align: left;">慢</td>
+<td style="text-align: left;">内置寻址和应答，引脚少</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SPI</strong></td>
+<td style="text-align: left;">高速数据流 (SD卡, 显示屏, ADC/DAC)</td>
+<td style="text-align: left;"><strong>4+</strong></td>
+<td style="text-align: left;">主从/星型</td>
+<td style="text-align: left;"><strong>快</strong></td>
+<td style="text-align: left;">全双工，协议简单，速度快</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>UART</strong></td>
+<td style="text-align: left;">调试，连接功能模块 (GPS, 蓝牙)</td>
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;">点对点</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;">异步，简单，应用广泛</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CAN</strong></td>
+<td style="text-align: left;"><strong>汽车电子</strong>，工业自动化，医疗设备</td>
+<td style="text-align: left;"><strong>2 (差分)</strong></td>
+<td style="text-align: left;">总线型</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;"><strong>极高可靠性</strong>，抗干扰强，基于消息优先级</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>LIN</strong></td>
+<td style="text-align: left;">汽车内低成本部件控制 (车窗, 座椅)</td>
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;">单主-多从总线</td>
+<td style="text-align: left;">慢</td>
+<td style="text-align: left;">成本极低，是CAN的补充</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>One-Wire</strong></td>
+<td style="text-align: left;">温度传感器，身份认证</td>
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;">总线型</td>
+<td style="text-align: left;">慢</td>
+<td style="text-align: left;">连线最少，可寄生供电</td>
+</tr>
+</tbody>
+</table>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="../../../assets/logo.gif" alt="Why">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-06 00:00:00+00:00">November 6, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">FPGA</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="spi-i2c"><a class="toclink" href="../../2025/11/06/spi-i2c/">Spi i2c</a></h2>
+<p>I2C 和 SPI 是嵌入式系统中最常用的两种<strong>同步串行通信协议</strong>，它们都用于在单个主板上的芯片之间进行短距离通信，比如单片机（MCU）与传感器、存储器、ADC/DAC等外设之间。</p>
+<p>尽管它们的目的相似，但实现方式、速度和应用场景却有很大不同。</p>
+<hr />
+<h4 id="spi-serial-peripheral-interface"><a class="toclink" href="../../2025/11/06/spi-i2c/#spi-serial-peripheral-interface"><strong>SPI (Serial Peripheral Interface / 串行外设接口)</strong></a></h4>
+<p>可以把它想象成一条<strong>高速、全双工的“私密电话线”</strong>。</p>
+<h5 id="1"><a class="toclink" href="../../2025/11/06/spi-i2c/#1"><strong>1. 核心概念</strong></a></h5>
+<p>SPI 是一种<strong>主从（Master-Slave）</strong>架构的通信协议。通信总是由主设备（通常是MCU）发起。它速度非常快，并且支持<strong>全双工</strong>通信，意味着主设备和从设备可以同时发送和接收数据。</p>
+<h5 id="2"><a class="toclink" href="../../2025/11/06/spi-i2c/#2"><strong>2. 工作原理与引脚</strong></a></h5>
+<p>SPI 通信通常需要 <strong>4 根线</strong>：</p>
+<ul>
+<li><strong>SCLK (Serial Clock):</strong> 串行时钟。由 Master 产生，用来同步数据传输，是整个通信的“心跳”。</li>
+<li><strong>MOSI (Master Out Slave In):</strong> 主出从入。Master 通过这条线向 Slave 发送数据。</li>
+<li><strong>MISO (Master In Slave Out):</strong> 主入从出。Slave 通过这条线向 Master 发送数据。</li>
+<li><strong>CS / SS (Chip Select / Slave Select):</strong> 片选信号。由 Master 控制。当 Master 想和某个 Slave 通信时，会先将对应 Slave 的 CS 线拉低（变为有效电平）。只有被选中的 Slave 才会响应 SCLK 和 MOSI 上的信号。</li>
+</ul>
+<p><strong>通信流程：</strong>
+1.  Master 将想要通信的那个 Slave 的 <strong>CS</strong> 线拉低。
+2.  Master 在 <strong>SCLK</strong> 线上产生时钟脉冲。
+3.  在每个时钟脉冲，Master 将一位数据推送到 <strong>MOSI</strong> 线上，同时从 <strong>MISO</strong> 线上读取一位数据。
+4.  通信结束后，Master 将 <strong>CS</strong> 线拉高，结束本次通信。</p>
+<h5 id="3"><a class="toclink" href="../../2025/11/06/spi-i2c/#3"><strong>3. 优缺点</strong></a></h5>
+<table>
+<thead>
+<tr>
+<th>优点 👍</th>
+<th>缺点 👎</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>速度非常快</strong>，通常可达几十 Mbps。</td>
+<td><strong>需要更多引脚</strong>，每个从设备都需要一根独立的 CS 线。</td>
+</tr>
+<tr>
+<td><strong>全双工通信</strong>，数据可以同时收发，效率高。</td>
+<td><strong>没有内置的寻址机制</strong>，完全依赖 CS 线来选择从设备。</td>
+</tr>
+<tr>
+<td><strong>协议简单</strong>，硬件实现容易，软件开销小。</td>
+<td><strong>没有从设备应答（ACK）机制</strong>，Master 不知道数据是否被成功接收。</td>
+</tr>
+<tr>
+<td>灵活性高，数据位数和传输格式可以自定义。</td>
+<td><strong>没有标准化的多主控支持</strong>，通常只有一个 Master。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="i2c-inter-integrated-circuit"><a class="toclink" href="../../2025/11/06/spi-i2c/#i2c-inter-integrated-circuit"><strong>I2C (Inter-Integrated Circuit / 集成电路总线)</strong></a></h4>
+<p>可以把它想象成一个<strong>“电话会议”或“派对热线”</strong>，所有设备都在同一条线上，通过“喊名字”来交流。</p>
+<h5 id="1_1"><a class="toclink" href="../../2025/11/06/spi-i2c/#1_1"><strong>1. 核心概念</strong></a></h5>
+<p>I2C 是一种<strong>多主控、多从设备</strong>的总线型协议。它只需要两根线就可以连接大量的设备。通信是<strong>半双工</strong>的，即在同一时刻，数据只能单向传输。</p>
+<h5 id="2_1"><a class="toclink" href="../../2025/11/06/spi-i2c/#2_1"><strong>2. 工作原理与引脚</strong></a></h5>
+<p>I2C 通信只需要 <strong>2 根线</strong>：</p>
+<ul>
+<li><strong>SDA (Serial Data):</strong> 串行数据线。用于双向传输数据。</li>
+<li><strong>SCL (Serial Clock):</strong> 串行时钟线。通常由 Master 产生，同步数据传输。</li>
+</ul>
+<p><strong>关键特性：</strong>
+*   <strong>寻址机制：</strong> 每个连接到总线上的从设备都有一个唯一的7位（或10位）地址。Master 发起通信时，首先会发送一个“<strong>起始信号</strong>”，然后广播它想找的那个从设备的地址。
+*   <strong>应答机制 (ACK/NACK):</strong> 地址匹配的从设备在接收到自己的地址后，会发送一个“<strong>应答位 (ACK)</strong>”给 Master，告诉它“我在线，准备好了”。如果 Master 发送地址后没有收到 ACK，就知道该设备不存在或无响应。
+*   <strong>上拉电阻：</strong> SDA 和 SCL 两条线路上必须接<strong>上拉电阻</strong>。这是因为 I2C 设备采用“开漏”或“开集”输出，它们只能将总线拉低到0，不能主动输出高电平。当所有设备都不操作时，上拉电阻会将总线拉到高电平。</p>
+<p><strong>通信流程：</strong>
+1.  Master 发送一个 <strong>起始信号 (Start Condition)</strong>。
+2.  Master 在 SDA 线上发送 <strong>7位从设备地址</strong> 和 <strong>1位读/写控制位</strong>。
+3.  总线上所有 Slave 监听地址，匹配的 Slave 回复一个 <strong>ACK</strong>。
+4.  Master（或 Slave，取决于读写操作）开始传输8位数据。
+5.  每传输完一个字节，接收方都会回复一个 <strong>ACK</strong>。
+6.  通信结束后，Master 发送一个 <strong>停止信号 (Stop Condition)</strong>，释放总线。</p>
+<h5 id="3_1"><a class="toclink" href="../../2025/11/06/spi-i2c/#3_1"><strong>3. 优缺点</strong></a></h5>
+<table>
+<thead>
+<tr>
+<th>优点 👍</th>
+<th>缺点 👎</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>极少的引脚</strong>，仅需 2 根线即可连接众多设备。</td>
+<td><strong>速度相对较慢</strong>，标准模式100kbps，快速模式400kbps。</td>
+</tr>
+<tr>
+<td><strong>内置寻址机制</strong>，可以在总线上轻松添加或移除设备。</td>
+<td><strong>半双工通信</strong>，数据不能同时收发。</td>
+</tr>
+<tr>
+<td><strong>有应答（ACK）机制</strong>，通信更可靠，Master 知道从设备的状态。</td>
+<td><strong>协议更复杂</strong>，有起始/停止/应答等状态，软件开销更大。</td>
+</tr>
+<tr>
+<td><strong>支持多主控</strong>，允许多个 Master 控制总线（有仲裁机制）。</td>
+<td><strong>硬件上需要上拉电阻</strong>，总线电容会限制设备数量和通信距离。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="_1"><a class="toclink" href="../../2025/11/06/spi-i2c/#_1"><strong>总结与对比</strong></a></h4>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>SPI (私密电话线)</th>
+<th>I2C (电话会议)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>引脚数量</strong></td>
+<td><strong>多 (4根起步)</strong>，每个从设备额外增加1根CS线</td>
+<td><strong>少 (仅2根)</strong>，与设备数量无关</td>
+</tr>
+<tr>
+<td><strong>速度</strong></td>
+<td><strong>快</strong> (&gt;&gt;1 Mbps)</td>
+<td><strong>慢</strong> (&lt;1 Mbps)</td>
+</tr>
+<tr>
+<td><strong>通信模式</strong></td>
+<td><strong>全双工</strong> (可同时收发)</td>
+<td><strong>半双工</strong> (同一时间只能单向传输)</td>
+</tr>
+<tr>
+<td><strong>设备角色</strong></td>
+<td>严格的<strong>主从</strong>模式</td>
+<td><strong>多主控，多从设备</strong></td>
+</tr>
+<tr>
+<td><strong>从设备选择</strong></td>
+<td>通过独立的 <strong>CS 片选线</strong></td>
+<td>通过总线广播 <strong>设备地址</strong></td>
+</tr>
+<tr>
+<td><strong>可靠性</strong></td>
+<td><strong>无</strong>内置应答机制</td>
+<td><strong>有</strong> ACK/NACK 应答机制</td>
+</tr>
+<tr>
+<td><strong>应用场景</strong></td>
+<td>高速数据流，如 <strong>SD卡、显示屏、高速ADC/DAC</strong></td>
+<td>连接大量低速外设，如 <strong>各种传感器、EEPROM、实时时钟</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句话总结：</strong></p>
+<ul>
+<li>当你需要<strong>高速率</strong>、<strong>点对点</strong>（或点对少数几个点）的数据传输，并且不介意多用几个引脚时，选择 <strong>SPI</strong>。</li>
+<li>当你需要连接<strong>很多设备</strong>、<strong>引脚资源紧张</strong>，并且对速度要求不高时，选择 <strong>I2C</strong>。</li>
+</ul>
+    
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../car/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Car">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Car
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lifestyle/" class="md-footer__link md-footer__link--next" aria-label="Next: Lifestyle">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Lifestyle
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 WHY
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/383477974?spm_id_from=333.337.0.0" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.813 4.653h.854q2.266.08 3.773 1.574Q23.946 7.72 24 9.987v7.36q-.054 2.266-1.56 3.773c-1.506 1.507-2.262 1.524-3.773 1.56H5.333q-2.266-.054-3.773-1.56C.053 19.614.036 18.858 0 17.347v-7.36q.054-2.267 1.56-3.76t3.773-1.574h.774l-1.174-1.12a1.23 1.23 0 0 1-.373-.906q0-.534.373-.907l.027-.027q.4-.373.92-.373t.92.373L9.653 4.44q.107.106.187.213h4.267a.8.8 0 0 1 .16-.213l2.853-2.747q.4-.373.92-.373c.347 0 .662.151.929.4s.391.551.391.907q0 .532-.373.906zM5.333 7.24q-1.12.027-1.88.773-.76.748-.786 1.894v7.52q.026 1.146.786 1.893t1.88.773h13.334q1.12-.026 1.88-.773t.786-1.893v-7.52q-.026-1.147-.786-1.894t-1.88-.773zM8 11.107q.56 0 .933.373.375.374.4.96v1.173q-.025.586-.4.96-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q0-.56.386-.947.387-.386.947-.386m8 0q.56 0 .933.373.375.374.4.96v1.173q-.025.586-.4.96-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q.025-.586.4-.96.373-.373.933-.373"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
