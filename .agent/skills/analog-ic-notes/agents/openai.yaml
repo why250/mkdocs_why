@@ -1,0 +1,7 @@
+interface:
+  display_name: "模拟 IC 讨论笔记"
+  short_description: "将模拟 IC 技术讨论沉淀为严谨、可复习的工程笔记"
+  default_prompt: "使用 $analog-ic-notes 将这次模拟 IC 讨论整理为本地草稿笔记。"
+
+policy:
+  allow_implicit_invocation: false

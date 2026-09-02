@@ -25,5 +25,8 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material
+      # Pygments 2.20 is incompatible with the current pymdown-extensions
+      # highlighter when a fenced code block has no title.
+      - run: pip install mkdocs-material "Pygments<2.20"
+      - run: mkdocs build --strict
       - run: mkdocs gh-deploy --force
