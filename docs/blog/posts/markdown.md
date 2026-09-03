@@ -4,11 +4,13 @@ date:
 categories:
   - CS
 tags:
-  - Python
+  - Markdown
+  - documentation
 authors:
   - why
 
 ---
 
-# Markdown cheet sheet
-[Markdown cheet sheet](https://www.markdownguide.org/cheat-sheet/)
+# Markdown 速查表
+
+常用 Markdown 语法可查阅 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)。

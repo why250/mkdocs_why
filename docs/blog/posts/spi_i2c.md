@@ -1,7 +1,8 @@
 ---
+
+# SPI 与 I2C：嵌入式同步串行通信
 date:
   created: 2025-11-06
-draft: 
 categories:
   - FPGA
 tags:

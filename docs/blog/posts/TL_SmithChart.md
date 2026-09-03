@@ -1,7 +1,6 @@
 ---
 date:
   created: 2025-08-12
-draft: 
 categories:
   - RF
 tags:

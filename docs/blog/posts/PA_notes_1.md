@@ -1,7 +1,8 @@
 ---
+
+# 功率放大器稳定性：栅极电阻
 date:
   created: 2025-02-24
-draft: 
 categories:
   - RF
 tags:

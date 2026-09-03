@@ -5,13 +5,17 @@ categories:
   - CS
 tags:
   - Python
+  - probability
+  - random-sampling
 authors:
   - why
 ---
 
 
 
-### 累积概率法的数学原理
+# 累积概率法：按离散概率分布随机采样
+
+## 原理
 
 累积概率法是一种用于根据概率分布随机选择元素的方法。其数学原理基于累积分布函数（Cumulative Distribution Function, CDF）。以下是详细的解释：
 
@@ -42,7 +46,7 @@ authors:
    - 遍历累积概率列表，找到第一个大于或等于随机数 \( x \) 的累积概率值。
    - 对应的元素即为选择的元素。
 
-### 数学公式
+## 数学表达
 
 假设概率分布为 \( P(p_1), P(p_2), \ldots, P(p_n) \)，累积概率 \( F(p_i) \) 可以表示为：
 \[
@@ -54,7 +58,7 @@ F(p_i) = \sum_{j=1}^{i} P(p_j)
 2. 找到最小的 \( i \) 使得 \( F(p_i) \geq x \)。
 3. 选择元素 \( p_i \)。
 
-### 应用在`sample_pagerank`函数中的数学原理
+## 在 `sample_pagerank` 中的应用
 
 在`sample_pagerank`函数中，累积概率法用于根据`pro_distri`概率分布选择下一个页面。具体步骤如下：
 
@@ -72,7 +76,7 @@ F(p_i) = \sum_{j=1}^{i} P(p_j)
    - 遍历累积概率列表，找到第一个大于或等于 `x` 的累积概率值。
    - 对应的页面即为选择的下一个页面。
 
-### Mermaid控制流图
+## 控制流
 
 ```mermaid
 flowchart TD

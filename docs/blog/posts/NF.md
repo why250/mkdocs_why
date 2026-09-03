@@ -1,7 +1,8 @@
 ---
+
+# 级联系统噪声系数：Friis 公式
 date:
   created: 2025-02-28
-draft: 
 categories:
   - RF
 tags:

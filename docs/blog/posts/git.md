@@ -4,19 +4,19 @@ date:
 categories:
   - CS
 tags:
+  - Git
   - Python
 authors:
   - why
 
 ---
 
-# Git 
-An exmaple of git :
+# 用 Git 迁移 Python 项目与虚拟环境
 
 <!-- more -->
-使用 Git 管理代码和配置，比直接拷贝文件更安全，也方便后续的版本控制。
+使用 Git 管理代码和配置，比直接拷贝文件更安全，也方便后续同步与回溯。
 
-但是，**有一个关键点必须注意**：不能把虚拟环境文件夹（`cp_test`）直接提交到 Git 仓库中。
+**关键原则：不要提交虚拟环境目录。** 环境会携带本机解释器和绝对路径，应在目标机器重新创建；需要纳入版本控制的是代码、配置和依赖清单。
 
 以下是使用 Git 进行迁移的最佳实践步骤：
 
@@ -24,7 +24,7 @@ An exmaple of git :
 
 在提交之前，你需要告诉 Git **忽略** 掉那些不需要甚至**不能**迁移的文件（如虚拟环境文件夹和临时文件）。
 
-在 `D:\SVN\usr\weihaoyu\Rigel\cp_test` 目录下打开终端，按以下步骤操作：
+在项目根目录打开终端，按以下步骤操作：
 
 **第一步：初始化仓库**
 ```powershell
@@ -35,12 +35,13 @@ git init
 你需要创建一个名为 `.gitignore` 的文件，防止 Git 追踪庞大且不可迁移的虚拟环境。
 在终端运行：
 ```powershell
-# 创建 .gitignore 文件并写入规则
-echo "cp_test/" > .gitignore
-echo ".ipynb_checkpoints/" >> .gitignore
-echo "__pycache__/" >> .gitignore
+@'
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+'@ | Set-Content .gitignore
 ```
-*   `cp_test/`: 忽略虚拟环境文件夹（因为里面的 exe 路径是绝对路径，迁移后会失效，必须在新电脑重装）。
+*   `.venv/`: 忽略虚拟环境文件夹（其中的解释器路径在迁移后会失效）。
 *   `.ipynb_checkpoints/`: 忽略 Jupyter 的自动存档。
 
 **第三步：提交文件**
@@ -49,13 +50,13 @@ echo "__pycache__/" >> .gitignore
 git add .
 git commit -m "Initial setup for DP2031 control project"
 ```
-此时，Git 只会打包：`dp2031_control.ipynb` [1], `requirement.txt`, `setup_kernel.bat` 以及 `.gitignore` 本身。
+此时，Git 只会打包代码、配置、`requirements.txt`（如有）以及 `.gitignore` 本身。
 
 **第四步：推送到远程仓库**
 你需要在 GitHub、Gitee 或公司的 GitLab 上建一个空仓库，然后关联推送：
 ```powershell
 git remote add origin <你的远程仓库地址>
-git push -u origin master
+git push -u origin main
 ```
 
 ---
@@ -66,33 +67,30 @@ git push -u origin master
 
 **第一步：克隆仓库**
 ```powershell
-git clone <你的远程仓库地址> dp2031_project
-cd dp2031_project
+git clone <你的远程仓库地址> <项目目录>
+cd <项目目录>
 ```
 
 **第二步：一键重建环境**
-因为我们忽略了 `cp_test` 文件夹，现在需要重新生成它。依次运行以下命令：
+因为我们忽略了 `.venv` 文件夹，现在需要重新生成它。依次运行以下命令：
 
 1.  **创建环境：**
     ```powershell
-    python -m venv cp_test
+    python -m venv .venv
     ```
 2.  **激活环境：**
     ```powershell
-    .\cp_test\Scripts\activate
+    .\.venv\Scripts\activate
     ```
 3.  **安装依赖：**
     ```powershell
-    pip install -r requirement.txt
+    python -m pip install -r requirements.txt
     ```
-4.  **配置内核 (运行你提交的脚本)：**
-    ```powershell
-    .\setup_kernel.bat
-    ```
+4.  **如使用 Jupyter，再配置内核：** 使用项目提供的脚本，或从已激活的环境安装并注册 `ipykernel`。
 
 ### 3. 为什么这样做更好？
-*   **体积小：** 你不需要传输几百兆的 `cp_test` 文件夹，只需要传输几十 KB 的代码和文本文件。
+*   **体积小：** 不需要传输几百 MB 的虚拟环境，只需传输代码与文本配置。
 *   **兼容性好：** 虚拟环境是在新电脑上利用本地 Python 重新构建的，完全避免了“路径乱码”或“找不到解释器”的错误。
-*   **可回溯：** 如果你在新电脑上修改了 `dp2031_control.ipynb`（比如修改了 VISA 地址 [1]），你可以提交更改，回家后拉取代码，两边同步。
+*   **可回溯：** 修改后提交并推送，其他机器拉取即可同步。
 
-**最后提醒：** 即使使用 Git 迁移，在新电脑打开 Notebook 后，依然不要忘记修改代码中的 `dp2031_visa_address` [1]，因为硬件连接地址是不会随 Git 同步自动变更的。
+**项目相关配置仍需检查：** 硬件地址、密钥和本机路径不应假定能随 Git 自动适配；其中敏感信息不应提交到仓库。
