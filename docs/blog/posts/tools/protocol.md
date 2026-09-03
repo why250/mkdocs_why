@@ -1,8 +1,8 @@
 ---
 
-# UART、CAN、LIN 与 One-Wire 协议
 date:
   created: 2025-11-06
+slug: protocol
 categories:
   - FPGA
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# UART、CAN、LIN 与 One-Wire 协议
+
 当然，除了 I2C 和 SPI，嵌入式领域还有许多重要的通信协议，它们各有专长，适用于不同的应用场景。
 
 这里介绍几种最常见的，并重点解释您提到的 **CAN 总线**。

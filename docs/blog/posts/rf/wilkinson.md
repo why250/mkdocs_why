@@ -1,8 +1,8 @@
 ---
 
-# Wilkinson 功分器：原理与功率分配
 date:
   created: 2025-02-24
+slug: wilkinson
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# Wilkinson 功分器：原理与功率分配
+
 好的，我们来详细了解一下威尔金森（Wilkinson）功分器的原理和参考文献。
 
 **Wilkinson功分器简介**
@@ -83,7 +86,7 @@ Wilkinson功分器的核心优势在于它能同时实现端口匹配、功率�
 
 
 
-![alt text](image/image_wilkinson.png)
+![alt text](../image/image_wilkinson.png)
 
 [Novel Design of Wilkinson Power Dividers With
 Arbitrary Power Division Ratios](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5546961)

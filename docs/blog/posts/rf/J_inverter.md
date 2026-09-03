@@ -1,8 +1,8 @@
 ---
 
-# J 变换器：导纳反转与滤波器耦合
 date:
   created: 2025-05-29
+slug: j-inverter
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# J 变换器：导纳反转与滤波器耦合
+
 这句话 "The use of admittance inverters is one possible way to transform the lumped-element model into a fully distributed model" 的意思是：
 
 **使用导纳变换器是将集总参数原型滤波器（由理想电感L和电容C组成）转换为完全由分布式参数元件（如传输线段）实现的滤波器的一种设计方法。**

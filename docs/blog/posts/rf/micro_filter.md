@@ -23,8 +23,8 @@ authors:
 - **待验证：** 仅在设计频率附近比较等效性；远离该频点时，分布参数元件不会保持理想集总元件特性。
 
 ## 短路线等效电感
-![alt text](image/image-micro-filter.png)
-![alt text](image/image-1.png)
+![alt text](../image/image-micro-filter.png)
+![alt text](../image/image-1.png)
 
 短路传输线的输入阻抗为 $Z_{in}=jZ_0\tan(\beta l)$。当电长度足够小时，它表现为感性；在 $f_c$ 处以归一化参数比较：
 
@@ -41,5 +41,5 @@ $\beta$ 是相移常数，$\beta=2\pi/\lambda$。在 $\omega=\omega_c$、$\Omega
 ## 开路线等效电容
 
 开路传输线可在并联形式下表现为容性。以下仿真图用于核对其在中心频率附近的等效关系。
-![alt text](image/imageC.png)
-![alt text](image/imageC-1.png)
+![alt text](../image/imageC.png)
+![alt text](../image/imageC-1.png)

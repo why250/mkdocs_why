@@ -14,7 +14,7 @@ authors:
 
 这是50欧电阻接一段传输线之后的S22,可以判断传输线特征阻抗是大于50欧还是小于50欧吗
 
-![alt text](image/image_0812.png)
+![alt text](../image/image_0812.png)
 
 可以，通过分析史密斯圆图（Smith Chart）可以判断传输线的特征阻抗。
 <!-- more -->

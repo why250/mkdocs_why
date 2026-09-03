@@ -1,8 +1,8 @@
 ---
 
-# 低阻抗开路线的并联电容等效
 date:
   created: 2025-05-29
+slug: tl-filter
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# 低阻抗开路线的并联电容等效
+
 
 在 Project 1 的 Step 6 中，将集总参数元件（电容 Ck 和电感 Lk）转换为分布式传输线单元时，计算传输线电长度 (𝛽𝑙𝑘) 的原理基于以下近似等效关系：
 <!-- more -->

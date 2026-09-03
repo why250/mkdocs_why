@@ -1,8 +1,8 @@
 ---
 
-# 级联系统噪声系数：Friis 公式
 date:
   created: 2025-02-28
+slug: nf
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# 级联系统噪声系数：Friis 公式
+
 级联系统的噪声系数（**Noise Figure, NF**）计算通常使用 **Friis 公式**，该公式描述了多个增益级连接时如何计算总的噪声系数。  
 <!-- more -->
 ### **Friis 公式：**

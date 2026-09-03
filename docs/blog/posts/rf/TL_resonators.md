@@ -1,8 +1,8 @@
 ---
 
-# 传输线谐振器
 date:
   created: 2025-05-29
+slug: tl-resonators
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# 传输线谐振器
+
 在Chapter 5, Question 2 (Problem 2) 中，设计的是一个**开路微带线谐振腔**，用来等效一个给定的集总参数RLC谐振电路。其传输线的电长度和特征阻抗是这样确定的：
 <!-- more -->
 1.  **谐振频率 (Resonant Frequency, f₀)**：

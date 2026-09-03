@@ -1,8 +1,8 @@
 ---
 
-# Verilog-A ADC 行为模型
 date:
   created: 2025-10-14
+slug: adc
 categories:
   - Analog Circuit
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# Verilog-A ADC 行为模型
+
 
 
 ### 代码功能简介

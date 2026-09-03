@@ -1,8 +1,8 @@
 ---
 
-# MCU 控制逻辑与 DAC 接口
 date:
   created: 2025-11-06
+slug: mcu
 categories:
   - FPGA
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# MCU 控制逻辑与 DAC 接口
+
 好的，我们来一起分析一下您提供的这几张原理图。
 
 ### **第一部分：控制逻辑确认**

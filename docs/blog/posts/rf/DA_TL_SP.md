@@ -64,7 +64,7 @@ $$Z_0 = \sqrt{Z_{sc} Z_{oc}}, \qquad \gamma l = \mathrm{arctanh} \sqrt{\frac{Z_{
 
 
 为便于作图，可将变量命名为 `GAMMA_L_VINP`（$\gamma l$）。`abs(imag(...))` 仅适合显示电长度的幅值；它会丢失符号，不能单独解决反双曲函数的分支选择问题。应沿频率连续跟踪相位，并结合通带物理约束判断。
-![alt text](image/2026-07-21%20162316.png)
+![alt text](../image/2026-07-21%20162316.png)
 以下记录对分布式放大器（DA）输入栅线 VINP 与输出漏线 VOUTP 的仿真观察。
 
 ---

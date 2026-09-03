@@ -1,8 +1,8 @@
 ---
 
-# IM3、IIP3 与 P1dB
 date:
   created: 2025-02-28
+slug: oip3
 categories:
   - RF
 tags:
@@ -11,6 +11,9 @@ authors:
   - why
 
 ---
+
+# IM3、IIP3 与 P1dB
+
 
 ### **1. 三阶交调（Third-Order Intermodulation, IM3）**
 #### **定义：**
@@ -46,7 +49,7 @@ $OIP3 = P_{\text{fund\_out}} + \frac{1}{2} (P_{\text{fund\_out}} - P_{\text{IM3\
 
 通常 IIP3 以 dBm 为单位，表示在输入端进行的测量。
 
-![alt text](image/image_0926.png)
+![alt text](../image/image_0926.png)
 
 ---
 
@@ -95,5 +98,5 @@ $= -30 + \frac{1}{2} \times 30 = -30 + 15 = -15 \text{ dBm}$
 ---
 
 ### **7. IIP3与P1dB**
-![alt text](image/image_0926_1.png)
-![alt text](image/image_0926_2.png)
+![alt text](../image/image_0926_1.png)
+![alt text](../image/image_0926_2.png)
