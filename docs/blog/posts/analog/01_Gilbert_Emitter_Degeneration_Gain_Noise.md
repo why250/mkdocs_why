@@ -1,3 +1,16 @@
+---
+date:
+  created: 2026-09-03
+draft: true
+categories:
+  - Analog Circuit
+tags:
+  - Gilbert Cell
+  - Emitter Degeneration
+  - Gain
+  - Noise
+---
+
 # 发射极退化电阻对 Gilbert 单元增益与噪声的影响
 
 ## 1. 目的

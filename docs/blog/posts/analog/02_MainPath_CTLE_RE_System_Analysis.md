@@ -1,3 +1,17 @@
+---
+date:
+  created: 2026-09-03
+draft: true
+categories:
+  - Analog Circuit
+tags:
+  - Gilbert Cell
+  - CTLE
+  - Emitter Degeneration
+  - Gain
+  - Noise
+---
+
 # 主信号通路 + 可调 CTLE 辅助通路下 Gilbert 退化电阻的增益与噪声分析
 
 ## 1. 场景
