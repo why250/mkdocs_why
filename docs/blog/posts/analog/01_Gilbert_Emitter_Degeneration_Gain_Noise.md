@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-09-03
-draft: true
+draft: 
 categories:
   - Analog Circuit
 tags:
