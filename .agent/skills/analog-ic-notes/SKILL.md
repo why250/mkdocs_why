@@ -24,6 +24,17 @@ These four layers are different:
 
 Do not force all four layers when one is genuinely absent, but do not collapse them into one vague conclusion.
 
+## ChatGPT Project integration
+
+When this repository is used from a ChatGPT Project, keep the Project Instruction as a thin conversation-level layer rather than duplicating this Skill. Use [references/chatgpt-project-instruction.md](references/chatgpt-project-instruction.md) as the canonical copy-paste template.
+
+The intended separation is:
+
+- Project Instruction: discussion behavior, distillation trigger, and GitHub handoff;
+- this Skill: note-generation workflow and engineering-writing contract;
+- `AGENTS.md`: repository mutation boundaries;
+- references: detailed technical, structure, image, and evidence rules.
+
 ## Invocation and storage
 
 - Run only after an explicit request such as `$analog-ic-notes`, “整理成笔记”, or “沉淀本次讨论”; never create a note merely because a technical discussion ended.
