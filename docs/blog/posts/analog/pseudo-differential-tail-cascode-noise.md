@@ -52,11 +52,11 @@ authors:
 
 #### 独立 emitter 结构
 
-![图 1：独立 emitter 结构原理图。Q66/Q26 的 emitter 彼此独立，各自由下方尾电流支路驱动。](../image/pseudo-differential-tail-cascode-noise/schematic-independent-emitter.png)
+![图 1：独立 emitter 结构原理图。Q66/Q26 的 emitter 彼此独立，各自由下方尾电流支路驱动。](../image/pseudo-differential-tail-cascode-noise/schematic-independent-emitter.webp)
 
 *图 1：独立 emitter 结构原理图。Q66/Q26 的 emitter 彼此独立，各自由下方尾电流支路驱动。*
 
-![图 2：独立 emitter 结构的 ADS Noise Contribution。1 Hz 时 R116/R117、Q24/Q25 的贡献高于 Q66/Q26。](../image/pseudo-differential-tail-cascode-noise/noise-independent-emitter.png)
+![图 2：独立 emitter 结构的 ADS Noise Contribution。1 Hz 时 R116/R117、Q24/Q25 的贡献高于 Q66/Q26。](../image/pseudo-differential-tail-cascode-noise/noise-independent-emitter.webp)
 
 *图 2：独立 emitter 结构的 ADS Noise Contribution。1 Hz 时 R116/R117、Q24/Q25 的贡献高于 Q66/Q26。*
 
@@ -72,11 +72,11 @@ authors:
 
 #### 共享 emitter 结构
 
-![图 3：共享 emitter 结构原理图。Q66/Q26 的 emitter 被直接连接到同一个节点。](../image/pseudo-differential-tail-cascode-noise/schematic-shared-emitter.png)
+![图 3：共享 emitter 结构原理图。Q66/Q26 的 emitter 被直接连接到同一个节点。](../image/pseudo-differential-tail-cascode-noise/schematic-shared-emitter.webp)
 
 *图 3：共享 emitter 结构原理图。Q66/Q26 的 emitter 被直接连接到同一个节点。*
 
-![图 4：共享 emitter 结构的 ADS Noise Contribution。1 Hz 时 Q66/Q26 成为主导噪声源，而 Q24/Q25、R116/R117 的差分贡献接近零。](../image/pseudo-differential-tail-cascode-noise/noise-shared-emitter.png)
+![图 4：共享 emitter 结构的 ADS Noise Contribution。1 Hz 时 Q66/Q26 成为主导噪声源，而 Q24/Q25、R116/R117 的差分贡献接近零。](../image/pseudo-differential-tail-cascode-noise/noise-shared-emitter.webp)
 
 *图 4：共享 emitter 结构的 ADS Noise Contribution。1 Hz 时 Q66/Q26 成为主导噪声源，而 Q24/Q25、R116/R117 的差分贡献接近零。*
 
