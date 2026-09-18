@@ -10,7 +10,7 @@
 
 ### 带有详细注释的代码
 
-```verilog
+``` { .text title="ADC.va" }
 // N-bit Analog to Digital Converter
 // LSB is <0>
 // Change binary_bits variable for your needs!
