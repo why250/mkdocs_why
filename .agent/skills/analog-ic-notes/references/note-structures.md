@@ -22,6 +22,16 @@ authors:
 
 Use the user's existing frontmatter keys when editing an established note collection. In this repository, retain `draft: true` until the user reviews the note.
 
+## Shared excerpt
+
+For substantial notes, add a short self-contained summary immediately after the H1 title, then insert:
+
+```markdown
+<!-- more -->
+```
+
+The text before `<!-- more -->` should let a reader understand the engineering question, the key observation or conclusion, and the main scope/boundary without opening the full article. Place the separator by semantic boundary, not by fixed length. Omit it for short notes where truncation would not improve the listing page.
+
 ## Shared reasoning hierarchy
 
 When the discussion contains enough evidence, organize the explanation around:

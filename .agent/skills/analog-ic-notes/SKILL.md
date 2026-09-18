@@ -73,6 +73,7 @@ Add `前提与定义`, `设计权衡`, `验证方法`, `Design Insight`, or `待
 - Match the user's language; default to concise Chinese when the discussion is in Chinese.
 - Start with valid YAML frontmatter. Preserve user-provided metadata and the target collection's schema. Otherwise use the current date, a narrow category, and 2–6 searchable tags. Do not invent an author.
 - Give the note a conclusion-oriented title that identifies the circuit/metric and question.
+- For substantial notes, write a compact opening summary after the title and place `<!-- more -->` immediately after that summary so blog/list pages show a useful excerpt instead of the full article. The excerpt should stand alone and state the engineering question, the key observation or conclusion, and the scope when relevant. Do not insert `<!-- more -->` mechanically by word count, and omit it for genuinely short notes.
 - Define every symbol at first use. State units and the direction/sign convention for error quantities.
 - Label each important result as one of: exact relation, first-order approximation, engineering heuristic, simulation observation, measurement observation, or external/process-dependent value.
 - Put assumptions next to the derivation they constrain. State the validity range of approximations such as small-signal, high-(eta), weak mismatch, unilateral gain, or flat-band response.
