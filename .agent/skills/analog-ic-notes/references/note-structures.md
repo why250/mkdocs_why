@@ -22,6 +22,21 @@ authors:
 
 Use the user's existing frontmatter keys when editing an established note collection. In this repository, retain `draft: true` until the user reviews the note.
 
+## Shared reasoning hierarchy
+
+When the discussion contains enough evidence, organize the explanation around:
+
+1. **Observation** — schematic/plot/table/measurement fact;
+2. **Derivation** — equation, small-signal model, noise model, or limiting-case argument;
+3. **Physical Interpretation** — device, feedback, current-path, or energy-flow mechanism;
+4. **Design Insight** — reusable implication for topology, sizing, biasing, verification, or tradeoffs.
+
+This is a reasoning hierarchy, not a mandatory heading list. Integrate it into the chosen structure when that reads more naturally.
+
+Always separate:
+- **general principle**: expected to hold across implementations under stated assumptions;
+- **current-case result**: tied to the present bias, process/model, frequency range, temperature, corner, or simulator setup.
+
 ## A. Calculation or simulation analysis
 
 Default structure for noise, SNR, gain, impedance, bandwidth, linearity, mismatch, and similar metric calculations:
@@ -31,7 +46,8 @@ Default structure for noise, SNR, gain, impedance, bandwidth, linearity, mismatc
 3. `严格算法`: physical definition and derivation in the correct domain.
 4. `ADS/仿真实现`: controller/setup, expressions, sweep/integration range, ports and reference conditions.
 5. `仿真现象解释`: important result, surprising trend, cause-and-effect explanation, and cross-check.
-6. `结论`: recommended definition/method, result, applicability, and next action.
+6. `Design Insight` when the result gives a reusable design rule or topology warning.
+7. `结论`: recommended definition/method, result, applicability, and next action.
 
 Add `前提与定义` when signal conventions such as RMS/Vpp, differential/single-ended, PSD/integrated noise, or sign conventions are easy to confuse.
 
@@ -45,8 +61,9 @@ Use for current mirrors, degeneration, feedback, small-signal models, pole-zero 
 4. `一阶近似与推导`
 5. `物理意义`
 6. `数值/仿真验证`
-7. `设计权衡与适用边界`
-8. `结论`
+7. `Design Insight`
+8. `设计权衡与适用边界`
+9. `结论`
 
 For mismatch, keep device mismatch, passive mismatch, bias/common-mode effects, and systematic layout effects distinct. Show how independent random terms are combined.
 
@@ -61,7 +78,8 @@ Use when the main value is diagnosing why a result looks wrong:
 5. `根因`
 6. `修正方法`
 7. `回归检查`
-8. `结论`
+8. `Design Insight` when the failure mode is reusable
+9. `结论`
 
 Separate model/setup errors from real circuit behavior. Record the exact metric definition, dataset, ports, termination, sweep, analysis mode, and relevant simulator expression.
 
@@ -73,9 +91,10 @@ Use for choosing a topology, device size, degeneration, bias, compensation, or c
 2. `候选方案`
 3. `一阶模型`
 4. `关键权衡` as a comparison table
-5. `推荐方案与理由`
-6. `验证计划`
-7. `结论`
+5. `Design Insight`
+6. `推荐方案与理由`
+7. `验证计划`
+8. `结论`
 
 Do not present a universal optimum when the recommendation depends on headroom, current, bandwidth, noise, linearity, stability, area, PVT, or process statistics.
 
