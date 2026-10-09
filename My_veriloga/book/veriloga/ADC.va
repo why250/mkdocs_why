@@ -1,0 +1,74 @@
+// N-bit Analog to Digital Converter
+// LSB is <0>
+// Change binary_bits variable for your needs!
+// Author: A. Sidun
+// Source: AnalogHub.ie
+// -- 注释由AI添加 --
+
+// 包含预定义的物理常量 (如 π) 和 discipline (如 electrical)
+`include "constants.vams"
+`include "disciplines.vams"
+
+// 使用 `define 定义ADC的位数（分辨率）。修改此处的数值即可改变ADC的位数。
+`define bits 12 
+
+// 定义名为 ADC 的模块，包含输出(out)、输入(in)和时钟(clk)三个端口
+module ADC (out, in, clk);
+    // --- 参数定义 ---
+    // 通过 parameter 可以在实例化模块时对这些值进行修改
+    parameter real vmin = 0.0;                       // 模拟输入的最小电压 (V)
+    parameter real vmax = 1.0 from (vmin:inf);       // 模拟输入的最大电压 (V)，必须大于vmin
+    parameter real td = 0 from [0:inf);              // 从时钟有效边沿到输出开始变化的时间延迟 (s)
+    parameter real tt = 0 from [0:inf);              // 输出信号的翻转时间 (上升/下降时间) (s)
+    parameter real vdd = 5;                          // 代表逻辑 '1' 的电压电平 (V)
+    parameter real vss = 0;                          // 代表逻辑 '0' 的电压电平 (V)
+    parameter real thresh = (vdd+vss)/2;             // 时钟信号的逻辑阈值电平 (V)，用于判断边沿
+    parameter integer dir = +1 from [-1:1] exclude 0; 
+                                                     // 触发方向: +1 代表上升沿, -1 代表下降沿
+    
+    // --- 局部参数 ---
+    // localparam 是在模块内部计算得出的常量，无法从外部修改
+    // levels 计算了ADC的总量化级数，等于 2 的 `bits` 次方
+    localparam integer levels = 1<<`bits;
+    
+    // --- 端口声明 ---
+    input in, clk;               // 模拟输入和时钟输入
+    output [`bits-1:0] out;      // N位并行数字输出总线
+    
+    // --- 端口/节点类型声明 ---
+    voltage in, clk;             // 将 in 和 clk 节点定义为 voltage 类型
+    voltage [`bits-1:0] out;     // 将 out 总线定义为 voltage 类型
+    
+    // --- 内部变量 ---
+    integer result;              // 用于存储量化后的整数结果
+    genvar i;                     // 循环变量，必须使用 genvar 类型，因为循环体内有模拟操作符 (transition)
+
+    // --- 模拟行为块 ---
+    analog begin
+        // --- 采样与量化 ---
+        // @(event) 结构用于在特定事件发生时执行代码块
+        // cross(V(clk)-thresh, dir) 用于检测时钟信号 V(clk) 穿过 thresh 电平的事件
+        // 'or initial_step' 确保在仿真开始时 (t=0) 也有一个初始的输出值
+        @(cross(V(clk)-thresh, dir) or initial_step) begin
+            // 核心量化公式：将输入电压线性映射到 [0, levels-1] 的整数范围
+            result = levels*((V(in) - vmin))/(vmax - vmin);
+
+            // --- 饱和处理 ---
+            // 如果输入电压超出范围，将结果限制在有效范围内
+            if (result > levels-1)
+                result = levels-1; // 上限饱和
+            else if (result < 0)
+                result = 0;        // 下限饱和
+        end
+
+        // --- 输出驱动 ---
+        // for 循环遍历每一位输出
+        for (i=0; i<`bits; i=i+1)
+            // V(out[i]) <+ ... 是一个贡献语句，用于驱动输出节点的电压
+            // transition() 是一个平滑函数，用于模拟真实的信号翻转，避免理想阶跃带来的收敛问题
+            // (result & (1<<i)) ? vdd : vss 是一个三元操作符
+            // (1<<i) 生成一个掩码，用于检查 result 的第 i 位是否为1
+            // 如果第 i 位是 1，输出 vdd；否则输出 vss
+            V(out[i]) <+ transition(result & (1<<i) ? vdd : vss, td, tt);
+    end
+endmodule
