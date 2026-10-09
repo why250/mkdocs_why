@@ -13,4 +13,8 @@ authors:
 
 # Markdown 速查表
 
+常用语法可从下方速查资料快速定位。
+
+<!-- more -->
+
 常用 Markdown 语法可查阅 [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)。

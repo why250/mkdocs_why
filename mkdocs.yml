@@ -7,12 +7,12 @@ nav:
   - 建模与验证: modeling.md
   - 工具与 CS: tools.md
   - 生活与杂项: misc.md
-  - 文章:
-    - 全部文章: blog/index.md
+  - 全部文章: blog/index.md
   - 标签: tags.md
 plugins:
   - search
   - blog:
+      post_excerpt: required
       archive_date_format: MM/yyyy
       archive_url_date_format: MM/yyyy
       archive_name: 按日期归档

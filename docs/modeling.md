@@ -5,7 +5,7 @@
 ## 文章入口
 
 - [Verilog-A ADC 行为模型](My_veriloga/book/veriloga/ADC.md)
-- [浏览模拟 IC 分类归档](../blog/category/analog-circuit/)
+- [阅读 ADC 行为模型笔记](blog/posts/analog/ADC.md)
 
 ## 参考资料与源码
 

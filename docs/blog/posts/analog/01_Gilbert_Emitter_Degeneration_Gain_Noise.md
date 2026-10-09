@@ -16,6 +16,8 @@ tags:
 
 本文分析 Gilbert steering pair 中发射极退化电阻 $R_E$ 对 DC steering、AC 信号增益以及噪声的影响。
 
+<!-- more -->
+
 ## 2. 模型与定义
 
 定义单个 steering pair 的总电流：

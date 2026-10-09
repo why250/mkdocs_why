@@ -18,6 +18,8 @@ authors:
 
 这里介绍几种最常见的，并重点解释您提到的 **CAN 总线**。
 
+<!-- more -->
+
 ---
 
 ### **1. UART (Universal Asynchronous Receiver/Transmitter)**

@@ -4,6 +4,5 @@
 
 ## 文章入口
 
-- [浏览汽车分类归档](../blog/category/car/)
-- [浏览生活分类归档](../blog/category/lifestyle/)
+- [My Car!](blog/posts/life/lifeupdate.md)
 - [查看全部文章](blog/index.md)

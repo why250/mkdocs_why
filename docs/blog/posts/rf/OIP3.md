@@ -14,6 +14,10 @@ authors:
 
 # IM3、IIP3 与 P1dB
 
+从三阶交调开始，梳理射频链路常用的线性度指标及其物理意义。
+
+<!-- more -->
+
 
 ### **1. 三阶交调（Third-Order Intermodulation, IM3）**
 #### **定义：**
@@ -22,8 +26,6 @@ authors:
 $f_{\text{IM3}} = 2f_1 - f_2 \quad \text{和} \quad f_{\text{IM3}} = 2f_2 - f_1$
 
 这些三阶互调分量会出现在输入信号附近，并可能干扰有用信号，造成严重的带内失真。通常，IM3 用 **dBc**（相对于基波功率的 dB）表示。
-<!-- more -->
-
 #### **数学表达：**
 若基波输出功率为 $P_{\text{out}}$，IM3 分量的输出功率通常与输入功率 $P_{\text{in}}$ 呈 **三次方关系**：
 $P_{\text{IM3-out}} \propto (P_{\text{in}})^3$
