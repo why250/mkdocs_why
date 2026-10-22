@@ -2,7 +2,7 @@
 title: Kelvin 四线法的本质：低电阻测量、芯片端电压检测与 Remote Sense 的区别
 date:
   created: 2026-10-22
-draft: true
+draft: false
 categories:
   - Analog Circuit
 tags:
