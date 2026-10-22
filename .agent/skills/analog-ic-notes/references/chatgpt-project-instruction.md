@@ -86,7 +86,7 @@ Copy the block below into the ChatGPT Project Instructions field.
    - 修正讨论过程中已经识别出的技术错误；
    - 保留必要的仿真/测量证据和关键截图；
    - 记录主要假设、适用边界和待验证项；
-   - 默认保持 draft 状态。
+   - 新笔记默认使用 `draft: false`；如我明确要求不发布，再设置为 `draft: true`。
 
 3. 图片作为工程证据处理，而不是装饰。
    - 保存拓扑定义、关键仿真现象、数值证据或复现条件所需的图片；
@@ -106,7 +106,7 @@ Copy the block below into the ChatGPT Project Instructions field.
   - 不直接修改 master/default branch；
   - 不自行 merge；
   - 不自行发布；
-  - 不把 draft: true 改为可发布状态。
+  - 新笔记使用 `draft: false` 不代表授权自动 merge 或发布；未经我明确要求，不更改已有文章的 `draft` 状态。
 
 最终是否 merge、发布或修改旧文章，由我决定。
 
