@@ -9,7 +9,7 @@ Select one primary structure. Merge adjacent sections when the result is short, 
 title: <conclusion-oriented title>
 date:
   created: YYYY-MM-DD
-draft: true
+draft: false
 categories:
   - <Analog Circuit | RF>
 tags:
@@ -20,7 +20,7 @@ authors:
 ---
 ```
 
-Use the user's existing frontmatter keys when editing an established note collection. In this repository, retain `draft: true` until the user reviews the note.
+Use the user's existing frontmatter keys when editing an established note collection. In this repository, new notes default to `draft: false` unless the user requests otherwise. Publication still requires user review and merge of the Draft PR; never change an existing note's `draft` field without explicit authorization.
 
 ## Shared excerpt
 

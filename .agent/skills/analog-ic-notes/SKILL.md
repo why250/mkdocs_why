@@ -39,7 +39,7 @@ The intended separation is:
 
 - Run only after an explicit request such as `$analog-ic-notes`, “整理成笔记”, or “沉淀本次讨论”; never create a note merely because a technical discussion ended.
 - In this repository, save the new note under the category directory: `docs/blog/posts/analog/`, `rf/`, `tools/`, or `life/`, followed by an English `kebab-case` slug. Derive a short, descriptive technical slug from the title.
-- New notes always use `draft: true`.
+- New notes use `draft: false` by default. Use `draft: true` when the user explicitly requests an unpublished note. The note's YAML `draft` value is separate from a GitHub Draft PR: do not merge or publish on the user's behalf.
 - Never overwrite an existing note. Check every `docs/blog/posts/**/<slug>.md`; if the slug already exists, ask the user to choose a new name or confirm a proposed alternative.
 - Treat old filenames/frontmatter as legacy. Do not rename or normalize old notes unless the user explicitly requests it.
 - If GitHub write access is available, follow the repository's `AGENTS.md`: do not write remotely without explicit authorization; when authorized, use a dedicated feature branch and Draft PR, never direct writes to the default branch.
@@ -71,7 +71,7 @@ Add `前提与定义`, `设计权衡`, `验证方法`, `Design Insight`, or `待
 ## Drafting rules
 
 - Match the user's language; default to concise Chinese when the discussion is in Chinese.
-- Start with valid YAML frontmatter. Preserve user-provided metadata and the target collection's schema. Otherwise use the current date, a narrow category, and 2–6 searchable tags. Do not invent an author.
+- Start with valid YAML frontmatter. Preserve user-provided metadata and the target collection's schema. For a new note, default to `draft: false`; do not silently change the `draft` status of existing notes. Otherwise use the current date, a narrow category, and 2–6 searchable tags. Do not invent an author.
 - Give the note a conclusion-oriented title that identifies the circuit/metric and question.
 - For substantial notes, write a compact opening summary after the title and place `<!-- more -->` immediately after that summary so blog/list pages show a useful excerpt instead of the full article. The excerpt should stand alone and state the engineering question, the key observation or conclusion, and the scope when relevant. Do not insert `<!-- more -->` mechanically by word count, and omit it for genuinely short notes.
 - Define every symbol at first use. State units and the direction/sign convention for error quantities.
@@ -99,7 +99,7 @@ Add `前提与定义`, `设计权衡`, `验证方法`, `Design Insight`, or `待
 
 ## Output contract
 
-In this repository, write the complete Markdown note to its draft path, then report only the path and any `整理说明`. Elsewhere, return Markdown that can be saved directly. Do not precede it with a long explanation.
+In this repository, write the complete Markdown note to its intended note path, then report only the path and any `整理说明`. Elsewhere, return Markdown that can be saved directly. Do not precede it with a long explanation.
 
 When useful, append a short section outside the note named `整理说明` containing only:
 
